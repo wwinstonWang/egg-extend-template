@@ -24,7 +24,7 @@
       配置信息统一在config目录中。其中plugin.js配置项目使用插件，config.default.js配置插件配置信息。
 
       1. 数据库配置
-
+  ```javascript
           config.sequelize = {
 
          ​    dialect: 'mysql', // support: mysql, mariadb, postgres, mssql
@@ -50,9 +50,9 @@
          ​    }
 
            };
-
+```
       2. cors配置
-
+  ```javascript
          config.cors = {
 
          ​    origin: '*',
@@ -62,9 +62,9 @@
          ​    // credentials: true  //此场景, origin不能为*
 
            };
-
+```
       3. nacos配置
-
+  ```javascript
          config.eggExtend = {
 
          ​    app:true,
@@ -94,11 +94,12 @@
          ​    }
 
            };
+  ```
 
          当项目不需要调用其它微服务时，可以禁用eggExtend插件。
 
          禁用方式为在plugin.js添加如下代码：
-
+  ```javascript
          eggExtend:{
 
          ​    enable: true,
@@ -106,7 +107,7 @@
          ​    package: 'egg-extend',
 
            }
-
+```
       
 
    2. restful控制器
